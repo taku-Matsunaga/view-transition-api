@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>View Transitions API | Detail1</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-layout">
+      <div>
+        <header class="header" style="background-color: lightblue; color: aliceblue;">
+          <a href="index.html" class="_home-link">
+            <svg class="header-back-icon" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M20 11H7.8l5.6-5.6L12 4l-8 8 8 8 1.4-1.4L7.8 13H20v-2z"></path>
+            </svg>
+            <span class="header-text">View Transitions API</span></a>
+        </header>
+      </div>
+      <main class="main">
+        <div class="detail-layout">
+          <div>
+            <div class="detail-photo-container">
+              <img class="photo-img" src="https://source.unsplash.com/wSJmlKMecHU" alt="" width="640" height="360" />
+            </div>
+            <div class="photo-details">
+              <div>
+                <p class="i-title">記事タイトル記事タイトル</p>
+                <p class="i-sub">2023/9/20</p>
+              </div>
+              <p class="i-desc">
+                View Transitions API は、異なる DOM 要素間のアニメーション化されたトランジションを作成するためのメカニズムです。この API を使用すると、クライアントの Web
+                ブラウザでJavaScriptを実行しているかのようにアニメーション効果を得ることができますが、実際にはすべてサーバー側で処理されます。
+                View Transitions API は、Chrome 111 以降または Edge 111 以降で使用できます。Firefox や Safari では動作しません。
+              </p>
+            </div>
+          </div>
+          <aside class="aside">
+            <ul class="side">
+              <li inert>
+                <a class="side-item" href="detail1.html"><img class="side-thumb"
+                    src="https://source.unsplash.com/wSJmlKMecHU" alt="" />
+                  <div class="side-meta">
+                    <p class="i-title">記事タイトル記事タイトル</p>
+                    <p class="i-sub">2023/9/20</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="side-item" href="./detail2.html"><img class="side-thumb"
+                    src="https://source.unsplash.com/yetQBOG_ZWg" alt="" />
+                  <div class="side-meta">
+                    <p class="i-title">View Transitions API</p>
+                    <p class="i-sub">2023/9/30</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

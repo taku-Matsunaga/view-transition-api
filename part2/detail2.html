@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>View Transitions API | Detail2</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-layout">
+      <main class="main">
+        <div class="detail-layout">
+          <div>
+            <div class="detail-photo-container">
+              <img class="photo-img" src="https://source.unsplash.com/yetQBOG_ZWg" alt="" width="640" height="360" />
+            </div>
+            <div class="photo-details">
+              <div>
+                <p class="i-title">View Transitions API</p>
+                <p class="i-sub">2023/9/30</p>
+              </div>
+              <p class="i-desc">
+                The View Transitions API provides a mechanism for easily creating animated transitions between different
+                DOM states while also updating the DOM contents in a single step.
+              </p>
+            </div>
+          </div>
+          <aside class="aside">
+            <ul class="side">
+              <li>
+                <a class="side-item" href="./detail1.html"><img class="side-thumb"
+                    src="https://source.unsplash.com/wSJmlKMecHU" alt="" />
+                  <div class="side-meta">
+                    <p class="i-title">記事タイトル記事タイトル</p>
+                    <p class="i-sub">2023/9/20</p>
+                  </div>
+                </a>
+              </li>
+              <li inert>
+                <a class="side-item" href="detail2.html"><img class="side-thumb"
+                    src="https://source.unsplash.com/yetQBOG_ZWg" alt="" />
+                  <div class="side-meta">
+                    <p class="i-title">View Transitions API</p>
+                    <p class="i-sub">2023/9/30</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

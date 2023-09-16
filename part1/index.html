@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Transitions API</title>
+  <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 一覧画面 */
+    .photo-thumb {
+      view-transition-name: photo-example;
+      contain: paint;
+    }
+
+    /* 詳細画面 */
+    .photo-detail {
+      view-transition-name: photo-example;
+      contain: paint;
+    }
+
+    /* 写真1 */
+    .photo-1 {
+      view-transition-name: photo-example-1;
+      contain: paint;
+    }
+
+    /* * 写真2 */
+    .photo-2 {
+      view-transition-name: photo-example-2;
+      contain: paint;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- 一覧画面 -->
+    <div id="view-index">
+      <ul class="photo-list">
+        <li class="w-80">
+          <div class="photo-link">
+            <img class="photo-thumb photo-1" data-content="1" src="https://source.unsplash.com/wSJmlKMecHU" width="640"
+              height="360" alt="" />
+            <div class="photo-meta">
+              <p class="i-title">記事タイトル記事タイトル</p>
+              <div>
+                <button class="btn button-open" data-content="1">詳細をひらく</button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="w-80">
+          <div class="photo-link">
+            <img class="photo-thumb photo-2" data-content="2" src="https://source.unsplash.com/yetQBOG_ZWg" width="640"
+              height="360" alt="" />
+            <div class="photo-meta">
+              <p class="i-title">View Transitions API</p>
+              <div>
+                <button class="btn button-open" data-content="2">詳細をひらく</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 詳細画面 -->
+    <div class="view-detail" data-content="1" hidden>
+      <div class="detail-action">
+        <button class="btn button-close">一覧へもどる</button>
+      </div>
+      <div class="detail-layout">
+        <div>
+          <img class="photo-detail photo-1" src="https://source.unsplash.com/wSJmlKMecHU" />
+        </div>
+        <div class="photo-details">
+          <div>
+            <p class="i-title">記事タイトル記事タイトル</p>
+            <p class="i-sub">2023/9/20</p>
+          </div>
+          <p class="i-desc">
+            View Transitions API は、異なる DOM 要素間のアニメーション化されたトランジションを作成するためのメカニズムです。この API を使用すると、クライアントの Web ブラウザで
+            JavaScript
+            を実行しているかのようにアニメーション効果を得ることができますが、実際にはすべてサーバー側で処理されます。
+            View Transitions API は、Chrome 111 以降または Edge 111 以降で使用できます。Firefox や Safari では動作しません。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 詳細画面 -->
+    <div class="view-detail" data-content="2" hidden>
+      <div class="detail-action">
+        <button class="btn button-close">一覧へもどる</button>
+      </div>
+      <div class="detail-layout">
+        <div>
+          <img class="photo-detail photo-2" src="https://source.unsplash.com/yetQBOG_ZWg" />
+        </div>
+        <div class="photo-details">
+          <div>
+            <p class="i-title">View Transitions API</p>
+            <p class="i-sub">2023/9/30</p>
+          </div>
+          <p class="i-desc">
+            The View Transitions API provides a mechanism for easily creating animated transitions between different DOM
+            states while also updating the DOM contents in a single step.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<!-- script.jsを読み込み -->
+<script src="script.js"></script>
+
+</html>
